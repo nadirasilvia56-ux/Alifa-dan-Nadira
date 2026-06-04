@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-Pop Quiz: Which K-Pop Idol Are You?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-violet-200 via-sky-200 to-pink-200 text-slate-900">
+    <main class="flex items-center justify-center py-8 px-4">
+      <section class="relative w-full max-w-md rounded-[2rem] bg-white/60 p-6 shadow-2xl shadow-violet-200 backdrop-blur-xl ring-1 ring-white/70">
+        <div class="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-violet-800 shadow-sm">
+          <span class="h-2 w-2 rounded-full bg-fuchsia-500"></span>
+          <span>K-Pop Quiz</span>
+        </div>
+
+        <div id="screen-1" class="screen flex flex-col gap-8">
+          <div class="text-center pt-12">
+            <h1 class="text-3xl font-semibold tracking-tight text-violet-950 sm:text-4xl">Which K-Pop Idol Are You?</h1>
+            <p class="mt-4 text-sm leading-6 text-violet-700 sm:text-base">Ikuti quiz singkat untuk menemukan idola K-Pop yang paling cocok dengan kepribadianmu.</p>
+          </div>
+          <div class="space-y-4">
+            <button id="startQuiz" class="w-full rounded-full bg-fuchsia-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-fuchsia-300 transition duration-200 hover:bg-fuchsia-600 active:scale-[0.98]">Mulai Quiz</button>
+          </div>
+        </div>
+
+        <div id="screen-2" class="screen hidden flex-col gap-6">
+          <div class="progress-bar h-1 rounded-full bg-white/70 shadow-inner shadow-violet-100">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600" style="width:33%"></div>
+          </div>
+          <div class="rounded-[2rem] bg-white/90 p-6 shadow-md shadow-violet-100">
+            <p class="text-lg font-semibold text-violet-950">1. Kamu lebih suka ngapain di waktu luang?</p>
+          </div>
+          <div class="space-y-3">
+            <button data-score="1" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Latihan & mengembangkan diri </button>
+            <button data-score="2" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Hangout dengan teman-teman</button>
+            <button data-score="3" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Me time</button>
+            <button data-score="4" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Eksplor hal baru & berpetualang</button>
+          </div>
+          <button id="nextTo3" class="mt-auto rounded-full bg-violet-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-violet-300 transition duration-200 hover:bg-violet-700 active:scale-[0.98]">Lanjutkan</button>
+        </div>
+
+        <div id="screen-3" class="screen hidden flex-col gap-6">
+          <div class="progress-bar h-1 rounded-full bg-white/70 shadow-inner shadow-violet-100">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600" style="width:66%"></div>
+          </div>
+          <div class="rounded-[2rem] bg-white/90 p-6 shadow-md shadow-violet-100">
+            <p class="text-lg font-semibold text-violet-950">2. Gaya yang paling kamu suka saat tampil?</p>
+          </div>
+          <div class="space-y-3">
+            <button data-score="1" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Soujo</button>
+            <button data-score="2" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">y2k</button>
+            <button data-score="3" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Sweatwear</button>
+            <button data-score="4" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Casual</button>
+          </div>
+          <button id="nextTo4" class="mt-auto rounded-full bg-violet-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-violet-300 transition duration-200 hover:bg-violet-700 active:scale-[0.98]">Lanjutkan</button>
+        </div>
+
+        <div id="screen-4" class="screen hidden flex-col gap-6">
+          <div class="progress-bar h-1 rounded-full bg-white/70 shadow-inner shadow-violet-100">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600" style="width:100%"></div>
+          </div>
+          <div class="rounded-[2rem] bg-white/90 p-6 shadow-md shadow-violet-100">
+            <p class="text-lg font-semibold text-violet-950">Teman-teman mu bilang kamu orang yang?</p>
+          </div>
+          <div class="space-y-3">
+            <button data-score="1" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Ceria dan menyenangkan</button>
+            <button data-score="2" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Cool & percaya diri</button>
+            <button data-score="3" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Pendiem</button>
+            <button data-score="4" class="answer-btn w-full rounded-3xl border border-violet-100 bg-white/90 px-5 py-4 text-left text-violet-800 transition duration-200 hover:bg-violet-50">Unik & beda dari yang lain</button>
+          </div>
+          <button id="showResult" class="mt-auto rounded-full bg-fuchsia-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-fuchsia-300 transition duration-200 hover:bg-fuchsia-600 active:scale-[0.98]">Lihat Hasil</button>
+        </div>
+
+        <div id="screen-5" class="screen hidden flex-col gap-6">
+          <div class="rounded-[2rem] bg-white/90 p-6 shadow-md shadow-violet-100">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-fuchsia-600">Hasilmu</p>
+            <h2 id="resultName" class="mt-3 text-2xl font-semibold text-violet-950">&nbsp;</h2>
+            <p id="resultShort" class="mt-2 text-sm leading-6 text-violet-700">&nbsp;</p>
+          </div>
+          <div class="relative mx-auto w-48 rounded-[2rem] bg-white/90 p-4 shadow-xl shadow-violet-100">
+            <div id="resultBadge" class="absolute -left-3 -top-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-fuchsia-500 text-white shadow-lg">⭐</div>
+            <div class="overflow-hidden rounded-[1.75rem] border border-violet-100 bg-violet-50 p-4">
+              <img id="resultImg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Hasil Idol" class="h-40 w-full rounded-3xl object-cover" />
+            </div>
+          </div>
+          <div id="resultDesc" class="rounded-[2rem] bg-white/90 p-5 text-sm text-violet-700 shadow-inner shadow-violet-100">
+            <p class="font-semibold text-violet-900">&nbsp;</p>
+            <p id="resultLong" class="mt-3 leading-6">&nbsp;</p>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <button id="shareInstagram" class="rounded-full bg-violet-600 px-4 py-3 text-sm font-semibold text-white transition duration-200 hover:bg-violet-700">Share ke Instagram</button>
+            <button class="rounded-full bg-fuchsia-500 px-4 py-3 text-sm font-semibold text-white transition duration-200 hover:bg-fuchsia-600">Download hasil</button>
+          </div>
+          <button id="nextTo6" class="mt-2 rounded-full bg-white/90 px-6 py-3 text-base font-semibold text-violet-950 shadow-lg shadow-violet-100 transition duration-200 hover:bg-violet-50">Lanjut ke Penutup</button>
+        </div>
+
+        <div id="screen-6" class="screen hidden flex-col gap-6 pb-4">
+          <div class="rounded-[2rem] bg-white/90 p-6 shadow-md shadow-violet-100 text-center">
+            <h2 class="text-3xl font-semibold text-violet-950">Terima Kasih!</h2>
+            <p class="mt-2 text-sm text-violet-700">Kamu telah menyelesaikan quiz.</p>
+          </div>
+          <div class="rounded-[2rem] bg-white/90 p-5 shadow-inner shadow-violet-100">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-fuchsia-600">Skor Akhir</p>
+            <p class="mt-3 text-4xl font-semibold text-violet-950">3/3</p>
+            <p class="mt-2 text-sm leading-6 text-violet-700">Hasil ini menunjukkan kamu punya jiwa idola yang confident dan penuh ekspresi.</p>
+          </div>
+          <div class="mx-auto w-40 rounded-[2rem] bg-violet-50/90 p-5 text-center shadow-xl shadow-violet-100">
+            <div class="mx-auto mb-4 h-24 w-24 rounded-[2rem] bg-white/80 p-3 shadow-inner shadow-violet-100">
+              <span class="block text-3xl">🐰</span>
+            </div>
+            <p class="text-sm text-violet-700">Si kelinci setia akan menemanimu kembali setiap kali ingin coba lagi.</p>
+          </div>
+          <button id="restartQuiz" class="mt-auto rounded-full bg-fuchsia-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-fuchsia-300 transition duration-200 hover:bg-fuchsia-600 active:scale-[0.98]">Main Lagi</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

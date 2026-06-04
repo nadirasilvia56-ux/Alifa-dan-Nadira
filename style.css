@@ -1,0 +1,53 @@
+/* Custom styling for K-Pop Quiz app */
+:root {
+  color-scheme: dark;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(180deg, #d8bbff 0%, #c6f0ff 45%, #ffd7ec 100%);
+}
+
+button:focus-visible,
+.answer-btn:focus-visible {
+  outline: 3px solid rgba(168, 85, 247, 0.4);
+  outline-offset: 3px;
+}
+
+.answer-btn.selected {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.16), rgba(236, 72, 153, 0.12));
+  border-color: rgba(139, 92, 246, 0.32);
+  color: #5b21b6;
+}
+
+.screen {
+  min-height: 480px;
+  padding-top: 0.75rem;
+  padding-bottom: 1rem;
+}
+
+.screen > .progress-bar {
+  margin-bottom: 1rem;
+}
+
+.screen .space-y-3 {
+  margin-top: 0.75rem;
+}
+
+.answer-btn {
+  min-height: 3.2rem;
+}
+
+@media (max-width: 640px) {
+  .screen {
+    min-height: 520px;
+  }
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.progress-fill {
+  transition: width 0.35s ease-in-out;
+}
